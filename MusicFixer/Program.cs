@@ -34,7 +34,7 @@ async Task ReadDirectory(string directory, bool autoFix)
 
     var type = "";
 
-    foreach (var alacFile in files.Where(x => x.EndsWith(".m4a", StringComparison.OrdinalIgnoreCase)))
+    foreach (var alacFile in files.Where(x => x.EndsWith(".m4a", StringComparison.OrdinalIgnoreCase) || x.EndsWith(".flac", StringComparison.OrdinalIgnoreCase)))
     {
         var theTrack = new Track(alacFile);
 
